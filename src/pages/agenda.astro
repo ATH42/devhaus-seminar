@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+<main class="feed">
+<h2 class="title">Agenda</h2>
+</main>
+</Layout>
+
+<style>
+
+	main {
+		padding: 1rem;
+		width: 100vw;
+    fontsize: 20px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		line-height: 1.6;
+	}
+
+.title {
+    font-size: 5em;
+    text-align: center;
+    background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+
+}
+</style>
