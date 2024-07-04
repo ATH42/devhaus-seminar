@@ -1,45 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Accordion from '../components/Accordion.astro'
-import AccordionItem from '../components/AccordionItem.astro'
-import Breadcrumbs from '../components/Breadcrumbs.astro'
-import BreadcrumbsItem from '../components/BreadcrumbsItem.astro'
-import Icon from '../components/Icon.astro'
+import Accordion from "../components/Accordion.astro";
+import AccordionItem from "../components/AccordionItem.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import BreadcrumbsItem from "../components/BreadcrumbsItem.astro";
+import Icon from "../components/Icon.astro";
 ---
 
 <Layout title="agenda">
-<body>
-<Breadcrumbs>
-  <BreadcrumbsItem
-    href="/"
-    label="Home"
-  />
-  <BreadcrumbsItem
-    currentPage={true}
-    label="Agenda"
-  />
-</Breadcrumbs>
+  <body>
+    <Breadcrumbs>
+      <BreadcrumbsItem href="/" label="Home" />
+      <BreadcrumbsItem currentPage={true} label="Agenda" />
+    </Breadcrumbs>
 
-<h2 class="title">Agenda</h2>
+    <h2 class="title">Agenda</h2>
 
-
-<Accordion>
-
-
-  <AccordionItem
-    header="Introduction"
-  >
-    <p>Who; Why; What; Where;</p>
-  </AccordionItem>
-  <AccordionItem
-    header="Obsidian Zettelkasten / Personal Knowledge Management"
-  >
-    <ol>
+    <Accordion>
+      <AccordionItem header="Introduction">
+        <p>Who; Why; What; Where;</p>
+      </AccordionItem>
+      <AccordionItem
+        header="Obsidian Zettelkasten / Personal Knowledge Management"
+      >
+        <ol>
           <li>
             <p>What is this and why would i want to use it?</p>
           </li>
           <li>
-            <p>Download this <a href="https://github.com/ATH42/obsidian-seminar.git">repo</a></p>
+            <p>
+              Download this <a
+                target="_blank"
+                href="https://github.com/ATH42/obsidian-seminar.git">repo</a>
+            </p>
           </li>
           <li>
             <p>Repo Walkthrough</p>
@@ -53,26 +46,25 @@ import Icon from '../components/Icon.astro'
           <li>
             <p>consolidate info from daily notes into MOC's and weekly notes</p>
           </li>
-    </ol>
-  </AccordionItem>
+        </ol>
+      </AccordionItem>
 
-  <AccordionItem
-    header="Vim Motions"
-  >
-    <ol>
+      <AccordionItem header="Vim Motions">
+        <ol>
           <li>
             <p>What the frick is vim? and why whould i use it over VScode?</p>
           </li>
           <li>
-            <p>Vimtutor or <a href="https://www.vim-hero.com/">Vimhero</a></p>
+            <p>
+              Vimtutor or <a target="_blank" href="https://www.vim-hero.com/"
+                >Vimhero</a>
+            </p>
           </li>
-    </ol>
-  </AccordionItem>
+        </ol>
+      </AccordionItem>
 
-  <AccordionItem
-    header="Shell and Terminal Emu's"
-  >
-    <ol>
+      <AccordionItem header="Shell and Terminal Emu's">
+        <ol>
           <li>
             <pre>
         <code>
@@ -93,11 +85,25 @@ import Icon from '../components/Icon.astro'
             <p>What is a terminal emulator?</p>
           </li>
           <li>
-            <p><a href="https://tiswww.case.edu/php/chet/bash/bashtop.html">bash</a> / <a href="https://zsh.sourceforge.io/">zsh</a>/ <a href="https://fishshell.com/">fish</a></p>
+            <p>
+              <a
+                href="https://tiswww.case.edu/php/chet/bash/bashtop.html"
+                target="_blank">bash</a
+              > / <a href="https://zsh.sourceforge.io/" target="_blank">zsh</a>/ <a
+                href="https://fishshell.com/"
+                target="_blank">fish</a>
+            </p>
           </li>
-            <li>
-              <p><a href="https://ohmyz.sh/">oh-my-zsh</a> / <a href="https://github.com/oh-my-fish/oh-my-fish">oh-my-fish</a> & <a href="https://github.com/jorgebucaran/fisher">fisher</a></p>
-            </li>
+          <li>
+            <p>
+              <a href="https://ohmyz.sh/" target="_blank">oh-my-zsh</a> / <a
+                href="https://github.com/oh-my-fish/oh-my-fish"
+                target="_blank">oh-my-fish</a
+              > & <a
+                href="https://github.com/jorgebucaran/fisher"
+                target="_blank">fisher</a>
+            </p>
+          </li>
           <li>
             <p>aliasing different commands</p>
           </li>
@@ -108,39 +114,35 @@ import Icon from '../components/Icon.astro'
               <li>exa</li>
               <li>bat</li>
               <li>lazygit</li>
+            </ul>
           </li>
-    </ol>
+        </ol>
+        <AccordionItem header="Overall Workspace & Raycast">
+          <p></p>
+        </AccordionItem>
+      </AccordionItem>
 
-  </AccordionItem>
-  <AccordionItem
-    header="Overall Workspace & Raycast"
-  >
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam est tenetur. </p>
-  </AccordionItem>
-</Accordion>
+      <Icon icon="smooth-line" />
+    </Accordion>
+  </body>
 
-<Icon icon="smooth-line" />
-</body>
+  <style>
+    body {
+      padding: 1rem;
+      width: 100vw;
+      font-size: 20px;
+      max-width: calc(100% - 2rem);
+      color: white;
+      line-height: 1.6;
+    }
+
+    .title {
+      font-size: 5em;
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 300%;
+      background-position: 0%;
+    }
+  </style>
 </Layout>
-
-<style>
-
-	body {
-		padding: 1rem;
-		width: 100vw;
-		font-size: 20px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		line-height: 1.6;
-	}
-
-.title {
-    font-size: 5em;
-    background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 300%;
-		background-position: 0%;
-
-}
-</style>

@@ -1,10 +1,10 @@
 ---
 interface Props {
-  header: string
-  children: any
+  header: string;
+  children: any;
 }
 
-const { header } = Astro.props
+const { header } = Astro.props;
 ---
 
 <li class="accordion__item">
@@ -17,7 +17,12 @@ const { header } = Astro.props
       onclick="toggleAccordionItem()"
     >
       {header}
-      <svg class="header__toggle-indicator" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <svg
+        class="header__toggle-indicator"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
         <path
           fill="currentColor"
           d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
@@ -25,7 +30,12 @@ const { header } = Astro.props
       </svg>
     </button>
   </h3>
-  <div id="accordion-panel-1" role="region" class="accordion__panel" aria-labelledby="accordion-header-1">
+  <div
+    id="accordion-panel-1"
+    role="region"
+    class="accordion__panel"
+    aria-labelledby="accordion-header-1"
+  >
     <div class="panel__inner">
       <slot />
     </div>
@@ -47,13 +57,12 @@ const { header } = Astro.props
     background-color: lavender;
     font-size: 1.5rem;
     font-family: "DynaPuff", cursive;
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
   }
-
 
   .header__toggle-indicator {
     width: 20px;
@@ -64,8 +73,9 @@ const { header } = Astro.props
     visibility: hidden;
     overflow: hidden;
     height: 0;
-    transition: height 0.3s ease-in-out, visibility 0s 0.3s;
-
+    transition:
+      height 0.3s ease-in-out,
+      visibility 0s 0.3s;
   }
 
   .panel__inner {
@@ -79,6 +89,8 @@ const { header } = Astro.props
   .is-active .accordion__panel {
     visibility: visible;
     height: auto;
-    transition: height 0.3s ease-in-out, visibility 0s 0s;
+    transition:
+      height 0.3s ease-in-out,
+      visibility 0s 0s;
   }
 </style>
