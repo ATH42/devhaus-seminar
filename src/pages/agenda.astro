@@ -20,9 +20,7 @@ import Icon from "../components/Icon.astro";
       <AccordionItem header="Introduction">
         <p>Who; Why; What; Where;</p>
       </AccordionItem>
-      <AccordionItem
-        header="Obsidian Zettelkasten / Personal Knowledge Management"
-      >
+      <AccordionItem header="Obsidian Zettelkasten">
         <ol>
           <li>
             <p>What is this and why would i want to use it?</p>
@@ -31,7 +29,8 @@ import Icon from "../components/Icon.astro";
             <p>
               Download this <a
                 target="_blank"
-                href="https://github.com/ATH42/obsidian-seminar.git">repo</a>
+                href="https://github.com/ATH42/obsidian-seminar.git">repo</a
+              >
             </p>
           </li>
           <li>
@@ -52,12 +51,13 @@ import Icon from "../components/Icon.astro";
       <AccordionItem header="Vim Motions">
         <ol>
           <li>
-            <p>What the frick is vim? and why whould i use it over VScode?</p>
+            <p>What the frick is vim? should you know about it?!</p>
           </li>
           <li>
             <p>
               Vimtutor or <a target="_blank" href="https://www.vim-hero.com/"
-                >Vimhero</a>
+                >Vimhero</a
+              >
             </p>
           </li>
         </ol>
@@ -91,7 +91,8 @@ import Icon from "../components/Icon.astro";
                 target="_blank">bash</a
               > / <a href="https://zsh.sourceforge.io/" target="_blank">zsh</a>/ <a
                 href="https://fishshell.com/"
-                target="_blank">fish</a>
+                target="_blank">fish</a
+              >
             </p>
           </li>
           <li>
@@ -101,7 +102,8 @@ import Icon from "../components/Icon.astro";
                 target="_blank">oh-my-fish</a
               > & <a
                 href="https://github.com/jorgebucaran/fisher"
-                target="_blank">fisher</a>
+                target="_blank">fisher</a
+              >
             </p>
           </li>
           <li>
@@ -117,32 +119,60 @@ import Icon from "../components/Icon.astro";
             </ul>
           </li>
         </ol>
-        <AccordionItem header="Overall Workspace & Raycast">
-          <p></p>
-        </AccordionItem>
+      </AccordionItem>
+      <AccordionItem header="Overall Workspace & Raycast">
+        <ul>
+          <li><p>How to create & utilise virtual Desktops</p></li>
+          <li><p>window manager</p></li>
+          <li><p>scripting</p></li>
+          <li><p>quicklinks</p></li>
+          <li><p>snippets</p></li>
+          <li><p>useful apps from the store</p></li>
+        </ul>
+      </AccordionItem>
+      <AccordionItem header="VScode">
+        <ul>
+          <li><p>Keybinds & Shortcuts</p></li>
+          <li>
+            <p>Plugins</p><ul>
+              <li>JS Doc with doxygen</li>
+              <li>Matching Brackets</li>
+              <li>Pretty Typescript errors</li>
+              <li>template string converter</li>
+            </ul>
+          </li>
+        </ul>
       </AccordionItem>
 
-      <Icon icon="smooth-line" />
+      <AccordionItem header="Isolating Problems">
+        <ol>
+          <li>What does this mean; and why is it helpful?</li>
+          <li>How to do this in your own projects?</li>
+          <li>how do you setup a project?</li>
+        </ol>
+      </AccordionItem>
     </Accordion>
+
+    <Icon icon="smooth-line" />
   </body>
-
-  <style>
-    body {
-      padding: 1rem;
-      width: 100vw;
-      font-size: 20px;
-      max-width: calc(100% - 2rem);
-      color: white;
-      line-height: 1.6;
-    }
-
-    .title {
-      font-size: 5em;
-      background-image: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 300%;
-      background-position: 0%;
-    }
-  </style>
 </Layout>
+
+<style>
+  body {
+    padding: 1rem;
+    width: 100vw;
+    font-size: 20px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    line-height: 1.6;
+  }
+
+  .title {
+    font-size: 5em;
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
+    background-position: 0%;
+  }
+</style>

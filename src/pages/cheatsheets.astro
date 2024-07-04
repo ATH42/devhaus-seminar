@@ -1,15 +1,44 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import BreadcrumbsItem from "../components/BreadcrumbsItem.astro";
+import { Image } from "astro:assets";
+import vim from "../../public/vim-sheet.png";
+import vsc from "../../public/vsc-sheet.png";
 ---
 
 <Layout title="cheatsheets">
-  <main class="feed">
+  <body>
+    <Breadcrumbs>
+      <BreadcrumbsItem href="/" label="Home" />
+      <BreadcrumbsItem href="/cheatsheets" label="Cheatsheets" />
+    </Breadcrumbs>
     <h2 class="title">Cheatsheets</h2>
-  </main>
+
+    <div class="border">
+      <a
+        href="https://thingsfittogether.com/wp-content/uploads/2021/03/Vim-Cheatsheet-2-Final-Draft.png"
+        target="_blank"
+      >
+        <img
+          src="https://thingsfittogether.com/wp-content/uploads/2021/03/Vim-Cheatsheet-2-Final-Draft.png"
+          alt="Vim Cheatsheet"
+          height="500"
+          loading="lazy"
+        />
+      </a>
+    </div>
+
+    <div class="border">
+      <Image src={vsc} alt="Vim Cheatsheet" height="500" loading="lazy" />
+    </div>
+    <Icon icon="smooth-line" />
+  </body>
 </Layout>
 
 <style>
-  main {
+  body {
     padding: 1rem;
     width: 100vw;
     font-size: 20px;
@@ -20,11 +49,20 @@ import Layout from "../layouts/Layout.astro";
 
   .title {
     font-size: 5em;
-    text-align: center;
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
+  }
+
+  .border {
+    border: 1px solid white;
+    width: fit-content;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 1rem;
   }
 </style>

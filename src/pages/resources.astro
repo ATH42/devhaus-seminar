@@ -1,15 +1,88 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import BreadcrumbsItem from "../components/BreadcrumbsItem.astro";
 ---
 
 <Layout title="resources">
-  <main class="feed">
+  <body>
+    <Breadcrumbs>
+      <BreadcrumbsItem href="/" label="Home" />
+      <BreadcrumbsItem href="/resources" label="resources" />
+    </Breadcrumbs>
     <h2 class="title">Resources</h2>
-  </main>
+
+    <div class="wrapper">
+      <div class="border">
+        <h3 class="section-title">Obsidian related</h3>
+        <a href="https://help.obsidian.md/Home" target="_blank">Obsidian Docs</a
+        >
+        <a href="https://zettelkasten.de/introduction/" target="_blank"
+          >Zettelkasten</a
+        >
+        <a href="https://discord.gg/obsidianmd" target="_blank"
+          >Discord Community</a
+        >
+        <a
+          href="https://blacksmithgu.github.io/obsidian-dataview/"
+          target="_blank">Dataview Docs</a
+        >
+        <a
+          href="https://charts.phib.ro/Meta/Charts/Charts+Documentation"
+          target="_blank">Charts Docs</a
+        >
+      </div>
+      <div class="border">
+        <h3 class="section-title">Shell related</h3>
+        <h4>fish</h4>
+        <a href="https://fishshell.com/" target="_blank">fish</a>
+        <a href="https://github.com/oh-my-fish/oh-my-fish" target="_blank"
+          >oh my fish!</a
+        >
+        <a href="https://github.com/jorgebucaran/fisher" target="_blank"
+          >fisher</a
+        >
+        <a href="https://github.com/jethrokuan/z" target="_blank"
+          >z - directory hop</a
+        >
+        <a href="https://github.com/gazorby/fish-exa" target="_blank">exa</a>
+        <a href="https://github.com/sharkdp/bat" target="_blank">bat</a>
+        <a href="https://github.com/jesseduffield/lazygit" target="_blank"
+          >lazygit</a
+        >
+        <h4>zsh</h4>
+        <a href="https://zsh.sourceforge.io/" target="_blank">ZSH</a>
+        <a href="https://ohmyz.sh/" target="_blank">oh my zsh</a>
+        <a href="https://github.com/romkatv/powerlevel10k" target="_blank"
+          >powerline 10k</a
+        >
+        <a href="https://github.com/agkozak/zsh-z" target="_blank"
+          >z - directory hop</a
+        >
+        <a href="https://github.com/ptavares/zsh-exa" target="_blank">exa</a>
+        <a href="https://github.com/fdellwing/zsh-bat" target="_blank">bat</a>
+        <a href="https://github.com/jesseduffield/lazygit" target="_blank"
+          >lazygit</a
+        >
+      </div>
+      <div class="border">
+        <h3 class="section-title">Tooling</h3>
+        <a href="https://www.raycast.com/" target="raycast">raycast</a>
+        <a href="https://justgetflux.com/" target="_blank">f.lux</a>
+        <a href="https://karabiner-elements.pqrs.org/" target="_blank"
+          >karabiner</a
+        >
+      </div>
+      <div class="border"><h3 class="section-title">VS Code</h3></div>
+    </div>
+
+    <Icon icon="smooth-line" />
+  </body>
 </Layout>
 
 <style>
-  main {
+  body {
     padding: 1rem;
     width: 100vw;
     font-size: 20px;
@@ -18,13 +91,38 @@ import Layout from "../layouts/Layout.astro";
     line-height: 1.6;
   }
 
+  .wrapper {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+  }
+
   .title {
     font-size: 5em;
-    text-align: center;
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
+  }
+
+  .section-title {
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    posposition: relative;
+  }
+  .border {
+    border: 1px solid white;
+    border-top: none;
+    width: fit-content;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 </style>
