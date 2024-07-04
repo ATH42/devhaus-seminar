@@ -4,7 +4,6 @@ import Icon from "../components/Icon.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import BreadcrumbsItem from "../components/BreadcrumbsItem.astro";
 import { Image } from "astro:assets";
-import vim from "../../public/vim-sheet.png";
 import vsc from "../../public/vsc-sheet.png";
 ---
 
@@ -31,7 +30,12 @@ import vsc from "../../public/vsc-sheet.png";
     </div>
 
     <div class="border">
-      <Image src={vsc} alt="Vim Cheatsheet" height="500" loading="lazy" />
+      <a
+        href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf"
+        target="_blank"
+      >
+        <Image src={vsc} alt="Vim Cheatsheet" height="500" loading="lazy" />
+      </a>
     </div>
     <Icon icon="smooth-line" />
   </body>
